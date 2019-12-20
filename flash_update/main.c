@@ -227,7 +227,6 @@ static inline void flash_cmd_program(uint32_t dst, uint32_t src, int size)
 {
     unsigned int last_word = 0;
 
-    /* HALF PAGE WRITE FROZEN AT SMT32L0 :( */
 #if defined(STM32L1) || defined(STM32L0)
     uint8_t buffer[FLASH_HALF_PAGE_SIZE] = { 0 };
     /* program half pages of source */
